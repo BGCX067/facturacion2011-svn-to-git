@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="1234" language="groovy" pageWidth="481" pageHeight="623" columnWidth="441" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="210"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     CLIENTES.`Numero` AS CLIENTES_Numero,
+     CLIENTES.`Nombre` AS CLIENTES_Nombre,
+     CLIENTES.`Direccion` AS CLIENTES_Direccion,
+     CLIENTES.`Telefono` AS CLIENTES_Telefono,
+     CLIENTES.`Dicose` AS CLIENTES_Dicose,
+     CLIENTES.`Rut` AS CLIENTES_Rut,
+     CAMIONES.`Matricula` AS CAMIONES_Matricula,
+     CAMIONES.`Marca` AS CAMIONES_Marca,
+     CAMIONES.`Color` AS CAMIONES_Color,
+     CAMIONES.`Ejes` AS CAMIONES_Ejes,
+     CAMIONES.`Metros` AS CAMIONES_Metros,
+     FACTURAS.`fNumero` AS FACTURAS_fNumero,
+     FACTURAS.`fFecha` AS FACTURAS_fFecha,
+     FACTURAS.`fMoneda` AS FACTURAS_fMoneda,
+     FACTURAS.`ftipoCambio` AS FACTURAS_ftipoCambio,
+     FACTURAS.`fLugarCarga` AS FACTURAS_fLugarCarga,
+     FACTURAS.`fLugarDescarga` AS FACTURAS_fLugarDescarga,
+     FACTURAS.`fKilometros` AS FACTURAS_fKilometros,
+     FACTURAS.`fGrupoMetros` AS FACTURAS_fGrupoMetros,
+     FACTURAS.`fCantBultos` AS FACTURAS_fCantBultos,
+     FACTURAS.`fCantAnimales` AS FACTURAS_fCantAnimales,
+     FACTURAS.`fGuia` AS FACTURAS_fGuia,
+     FACTURAS.`fImporte` AS FACTURAS_fImporte,
+     FACTURAS.`CliNro` AS FACTURAS_CliNro,
+     FACTURAS.`EmpNro` AS FACTURAS_EmpNro,
+     FACTURAS.`CamNro` AS FACTURAS_CamNro,
+     FACTURAS.`fKmRetorno` AS FACTURAS_fKmRetorno,
+     FACTURAS.`fObservaciones` AS FACTURAS_fObservaciones,
+     EMPLEADOS.`Numero` AS EMPLEADOS_Numero,
+     EMPLEADOS.`Nombre` AS EMPLEADOS_Nombre,
+     EMPLEADOS.`Direccion` AS EMPLEADOS_Direccion,
+     EMPLEADOS.`Telefono` AS EMPLEADOS_Telefono,
+     EMPLEADOS.`CI` AS EMPLEADOS_CI,
+     EMPLEADOS.`Fing` AS EMPLEADOS_Fing,
+     EMPLEADOS.`Cargo` AS EMPLEADOS_Cargo
+FROM
+     `CLIENTES` CLIENTES,
+     `CAMIONES` CAMIONES,
+     `FACTURAS` FACTURAS,
+     `EMPLEADOS` EMPLEADOS]]>
+	</queryString>
+	<field name="CLIENTES_Numero" class="java.lang.Integer"/>
+	<field name="CLIENTES_Nombre" class="java.lang.String"/>
+	<field name="CLIENTES_Direccion" class="java.lang.String"/>
+	<field name="CLIENTES_Telefono" class="java.lang.Integer"/>
+	<field name="CLIENTES_Dicose" class="java.lang.String"/>
+	<field name="CLIENTES_Rut" class="java.lang.String"/>
+	<field name="CAMIONES_Matricula" class="java.lang.String"/>
+	<field name="CAMIONES_Marca" class="java.lang.String"/>
+	<field name="CAMIONES_Color" class="java.lang.String"/>
+	<field name="CAMIONES_Ejes" class="java.lang.Integer"/>
+	<field name="CAMIONES_Metros" class="java.lang.String"/>
+	<field name="FACTURAS_fNumero" class="java.lang.Integer"/>
+	<field name="FACTURAS_fFecha" class="java.lang.String"/>
+	<field name="FACTURAS_fMoneda" class="java.lang.String"/>
+	<field name="FACTURAS_ftipoCambio" class="java.lang.Integer"/>
+	<field name="FACTURAS_fLugarCarga" class="java.lang.String"/>
+	<field name="FACTURAS_fLugarDescarga" class="java.lang.String"/>
+	<field name="FACTURAS_fKilometros" class="java.lang.Integer"/>
+	<field name="FACTURAS_fGrupoMetros" class="java.lang.Integer"/>
+	<field name="FACTURAS_fCantBultos" class="java.lang.Integer"/>
+	<field name="FACTURAS_fCantAnimales" class="java.lang.Integer"/>
+	<field name="FACTURAS_fGuia" class="java.lang.String"/>
+	<field name="FACTURAS_fImporte" class="java.lang.Integer"/>
+	<field name="FACTURAS_CliNro" class="java.lang.Integer"/>
+	<field name="FACTURAS_EmpNro" class="java.lang.Integer"/>
+	<field name="FACTURAS_CamNro" class="java.lang.String"/>
+	<field name="FACTURAS_fKmRetorno" class="java.lang.Integer"/>
+	<field name="FACTURAS_fObservaciones" class="java.lang.String"/>
+	<field name="EMPLEADOS_Numero" class="java.lang.Integer"/>
+	<field name="EMPLEADOS_Nombre" class="java.lang.String"/>
+	<field name="EMPLEADOS_Direccion" class="java.lang.String"/>
+	<field name="EMPLEADOS_Telefono" class="java.lang.Integer"/>
+	<field name="EMPLEADOS_CI" class="java.lang.String"/>
+	<field name="EMPLEADOS_Fing" class="java.lang.String"/>
+	<field name="EMPLEADOS_Cargo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<rectangle>
+				<reportElement x="312" y="29" width="100" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="269" y="32" width="43" height="17"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="14" width="103" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTROL INTERNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="59" width="386" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JOAQUIN SUAREZ 961     -    TEL/FAX (473) 33150     -    CELULAR     -     SALTO]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="319" y="32" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="23" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="285" splitType="Stretch">
+			<textField>
+				<reportElement x="183" y="74" width="230" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fLugarCarga}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="412" y="10" width="1" height="105"/>
+			</line>
+			<line>
+				<reportElement x="211" y="137" width="1" height="82"/>
+			</line>
+			<line>
+				<reportElement x="412" y="115" width="1" height="104"/>
+			</line>
+			<line>
+				<reportElement x="12" y="176" width="401" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="15" y="53" width="91" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dicose :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="177" width="91" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cant Bultos :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="183" y="32" width="229" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CLIENTES_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="12" width="229" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fNumero}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="11" y="31" width="401" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="183" y="95" width="229" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fLugarDescarga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="136" width="114" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kilometros Comun :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="198" width="75" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="115" width="403" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="218" y="157" width="70" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kilos :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="263" width="80" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma Remitente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="116" width="91" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="95" width="91" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar de Descarga :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="12" y="156" width="401" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="15" y="156" width="114" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kilometros Retorno :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="197" width="401" height="1"/>
+			</line>
+			<line>
+				<reportElement x="11" y="52" width="401" height="1"/>
+			</line>
+			<line>
+				<reportElement x="10" y="115" width="1" height="104"/>
+			</line>
+			<staticText>
+				<reportElement x="178" y="263" width="80" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma Conductor]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="135" width="401" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="31" width="95" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Cliente :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="74" width="91" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar de Carga :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="11" width="91" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nro :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="198" width="103" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fImporte}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="327" y="263" width="80" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma Recibidor]]></text>
+			</staticText>
+			<line>
+				<reportElement x="163" y="260" width="100" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="218" y="137" width="70" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° Guia :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="136" width="103" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fGuia}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="312" y="260" width="100" height="1"/>
+			</line>
+			<line>
+				<reportElement x="11" y="218" width="401" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="143" y="135" width="69" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fKilometros}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="177" width="70" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fCantBultos}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="11" y="10" width="401" height="1"/>
+			</line>
+			<line>
+				<reportElement x="11" y="73" width="401" height="1"/>
+			</line>
+			<line>
+				<reportElement x="12" y="259" width="100" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="310" y="177" width="102" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fCantAnimales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="53" width="230" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CLIENTES_Dicose}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="218" y="176" width="78" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cant Animales :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="11" y="94" width="402" height="1"/>
+			</line>
+			<line>
+				<reportElement x="10" y="10" width="1" height="105"/>
+			</line>
+			<textField>
+				<reportElement x="183" y="117" width="229" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fObservaciones}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="157" width="68" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fKmRetorno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="7" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>

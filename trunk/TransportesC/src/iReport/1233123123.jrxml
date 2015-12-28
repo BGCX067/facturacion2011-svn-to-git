@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="1233123123" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     FACTURAS.`fNumero` AS FACTURAS_fNumero,
+     FACTURAS.`fFecha` AS FACTURAS_fFecha,
+     FACTURAS.`fMoneda` AS FACTURAS_fMoneda,
+     FACTURAS.`ftipoCambio` AS FACTURAS_ftipoCambio,
+     FACTURAS.`fLugarCarga` AS FACTURAS_fLugarCarga,
+     FACTURAS.`fLugarDescarga` AS FACTURAS_fLugarDescarga,
+     FACTURAS.`fKilometros` AS FACTURAS_fKilometros,
+     FACTURAS.`fGrupoMetros` AS FACTURAS_fGrupoMetros,
+     FACTURAS.`fCantBultos` AS FACTURAS_fCantBultos,
+     FACTURAS.`fCantAnimales` AS FACTURAS_fCantAnimales,
+     FACTURAS.`fGuia` AS FACTURAS_fGuia,
+     FACTURAS.`fImporte` AS FACTURAS_fImporte,
+     FACTURAS.`CliNro` AS FACTURAS_CliNro,
+     FACTURAS.`EmpNro` AS FACTURAS_EmpNro,
+     FACTURAS.`CamNro` AS FACTURAS_CamNro,
+     FACTURAS.`fKmRetorno` AS FACTURAS_fKmRetorno,
+     FACTURAS.`fObservaciones` AS FACTURAS_fObservaciones,
+     EMPLEADOS.`Numero` AS EMPLEADOS_Numero,
+     EMPLEADOS.`Nombre` AS EMPLEADOS_Nombre,
+     EMPLEADOS.`Direccion` AS EMPLEADOS_Direccion,
+     EMPLEADOS.`Telefono` AS EMPLEADOS_Telefono,
+     EMPLEADOS.`CI` AS EMPLEADOS_CI,
+     EMPLEADOS.`Fing` AS EMPLEADOS_Fing,
+     EMPLEADOS.`Cargo` AS EMPLEADOS_Cargo,
+     CLIENTES.`Numero` AS CLIENTES_Numero,
+     CLIENTES.`Nombre` AS CLIENTES_Nombre,
+     CLIENTES.`Direccion` AS CLIENTES_Direccion,
+     CLIENTES.`Telefono` AS CLIENTES_Telefono,
+     CLIENTES.`Dicose` AS CLIENTES_Dicose,
+     CLIENTES.`Rut` AS CLIENTES_Rut
+FROM
+     `FACTURAS` FACTURAS,
+     `EMPLEADOS` EMPLEADOS,
+     `CLIENTES` CLIENTES
+WHERE
+     FACTURAs.EmpNro = EMPLEADOS.Numero
+ AND FACTURAS.CliNro = CLIENTES.Numero]]>
+	</queryString>
+	<field name="FACTURAS_fNumero" class="java.lang.Integer"/>
+	<field name="FACTURAS_fFecha" class="java.lang.String"/>
+	<field name="FACTURAS_fMoneda" class="java.lang.String"/>
+	<field name="FACTURAS_ftipoCambio" class="java.lang.Integer"/>
+	<field name="FACTURAS_fLugarCarga" class="java.lang.String"/>
+	<field name="FACTURAS_fLugarDescarga" class="java.lang.String"/>
+	<field name="FACTURAS_fKilometros" class="java.lang.Integer"/>
+	<field name="FACTURAS_fGrupoMetros" class="java.lang.Integer"/>
+	<field name="FACTURAS_fCantBultos" class="java.lang.Integer"/>
+	<field name="FACTURAS_fCantAnimales" class="java.lang.Integer"/>
+	<field name="FACTURAS_fGuia" class="java.lang.String"/>
+	<field name="FACTURAS_fImporte" class="java.lang.Integer"/>
+	<field name="FACTURAS_CliNro" class="java.lang.Integer"/>
+	<field name="FACTURAS_EmpNro" class="java.lang.Integer"/>
+	<field name="FACTURAS_CamNro" class="java.lang.String"/>
+	<field name="FACTURAS_fKmRetorno" class="java.lang.Integer"/>
+	<field name="FACTURAS_fObservaciones" class="java.lang.String"/>
+	<field name="EMPLEADOS_Numero" class="java.lang.Integer"/>
+	<field name="EMPLEADOS_Nombre" class="java.lang.String"/>
+	<field name="EMPLEADOS_Direccion" class="java.lang.String"/>
+	<field name="EMPLEADOS_Telefono" class="java.lang.Integer"/>
+	<field name="EMPLEADOS_CI" class="java.lang.String"/>
+	<field name="EMPLEADOS_Fing" class="java.lang.String"/>
+	<field name="EMPLEADOS_Cargo" class="java.lang.String"/>
+	<field name="CLIENTES_Numero" class="java.lang.Integer"/>
+	<field name="CLIENTES_Nombre" class="java.lang.String"/>
+	<field name="CLIENTES_Direccion" class="java.lang.String"/>
+	<field name="CLIENTES_Telefono" class="java.lang.Integer"/>
+	<field name="CLIENTES_Dicose" class="java.lang.String"/>
+	<field name="CLIENTES_Rut" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="77" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[FACTURAS_fNumero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[FACTURAS_fFecha]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="77" y="32" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fNumero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="31" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FACTURAS_fFecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

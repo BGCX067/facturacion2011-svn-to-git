@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="481" pageHeight="623" columnWidth="441" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.46410000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Documents and Settings\\Javier\\Mis documentos\\NetBeansProjects\\TransportesC\\src\\iReport\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT * from FACTURAS]]>
+	</queryString>
+	<field name="fNumero" class="java.lang.Integer"/>
+	<field name="fFecha" class="java.lang.String"/>
+	<field name="fMoneda" class="java.lang.String"/>
+	<field name="ftipoCambio" class="java.lang.Integer"/>
+	<field name="fLugarCarga" class="java.lang.String"/>
+	<field name="fLugarDescarga" class="java.lang.String"/>
+	<field name="fKilometros" class="java.lang.Integer"/>
+	<field name="fGrupoMetros" class="java.lang.Integer"/>
+	<field name="fCantBultos" class="java.lang.Integer"/>
+	<field name="fCantAnimales" class="java.lang.Integer"/>
+	<field name="fGuia" class="java.lang.String"/>
+	<field name="fImporte" class="java.lang.Integer"/>
+	<field name="CliNro" class="java.lang.Integer"/>
+	<field name="EmpNro" class="java.lang.Integer"/>
+	<field name="CamNro" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="345" y="26" width="25" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="370" y="26" width="25" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="394" y="26" width="25" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="44" y="59" width="386" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JOAQUIN SUAREZ 961     -    TEL/FAX (473) 33150     -    CELULAR     -     SALTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="29" width="38" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="6" width="112" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTROL INTERNO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="342" splitType="Stretch">
+			<textField>
+				<reportElement x="14" y="22" width="75" height="20"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[N° Factura :]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="22" width="20" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{fNumero}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="42" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[Fecha Factura:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="93" y="42" width="128" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fFecha}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="0" width="440" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="240"/>
+			</line>
+			<line>
+				<reportElement x="440" y="1" width="1" height="239"/>
+			</line>
+			<staticText>
+				<reportElement x="14" y="62" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[Mondeda :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="93" y="62" width="128" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{fMoneda}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="82" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tipo Cambio :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="93" y="82" width="128" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{ftipoCambio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="102" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[Lugar Carga :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="93" y="102" width="128" height="41"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fLugarCarga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="149" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[Lugar Descarga :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="93" y="149" width="128" height="46"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fLugarDescarga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="22" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kilometros R :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="22" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fKilometros}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="42" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Metros :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="42" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fGrupoMetros}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="62" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Cant Bultos :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="62" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fCantBultos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="82" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Cant Animales :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="82" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fCantAnimales}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="103" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Guia :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="103" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fGuia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="205" width="50" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Importe :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="123" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Cliente Nro °:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="345" y="205" width="85" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fImporte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="123" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CliNro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="144" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Emp Nro °:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="144" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpNro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="165" width="79" height="20"/>
+				<textElement/>
+				<text><![CDATA[Cam Nro °:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="165" width="108" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CamNro}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="288" y="230" width="143" height="1"/>
+			</line>
+			<line>
+				<reportElement x="1" y="239" width="439" height="1"/>
+			</line>
+			<line>
+				<reportElement x="11" y="302" width="121" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="33" y="310" width="82" height="20"/>
+				<textElement/>
+				<text><![CDATA[Firma Remitente]]></text>
+			</staticText>
+			<line>
+				<reportElement x="158" y="301" width="119" height="1"/>
+			</line>
+			<line>
+				<reportElement x="311" y="300" width="119" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="331" y="310" width="82" height="20"/>
+				<textElement/>
+				<text><![CDATA[Firma Recibidor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="310" width="82" height="20"/>
+				<textElement/>
+				<text><![CDATA[Firma Conductor]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="63" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
